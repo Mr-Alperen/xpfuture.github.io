@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPFuture OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --xp-primary: #245edb;
+            --xp-secondary: #3f8cf3;
+            --xp-taskbar: linear-gradient(to bottom, #245edb 0%, #3f8cf3 10%, #245edb 20%, #245edb 90%, #1941a5 100%);
+            --xp-window-title: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%);
+            --xp-accent: #3c911e;
+            --xp-bg-filter: hue-rotate(180deg) brightness(0.6);
+        }
+
+        [data-theme='cyber-pink'] {
+            --xp-primary: #ff00ff;
+            --xp-secondary: #ff77ff;
+            --xp-taskbar: linear-gradient(to bottom, #7a007a 0%, #ff00ff 10%, #7a007a 20%, #7a007a 90%, #4a004a 100%);
+            --xp-window-title: linear-gradient(to bottom, #7a007a 0%, #ff00ff 9%, #7a007a 18%, #7a007a 92%, #111 100%);
+            --xp-accent: #ff0080;
+            --xp-bg-filter: hue-rotate(280deg) brightness(0.7);
+        }
+
+        [data-theme='dark-mode'] {
+            --xp-primary: #111111;
+            --xp-secondary: #333333;
+            --xp-taskbar: linear-gradient(to bottom, #000 0%, #222 10%, #111 20%, #111 90%, #000 100%);
+            --xp-window-title: linear-gradient(to bottom, #222 0%, #444 9%, #222 18%, #222 92%, #000 100%);
+            --xp-accent: #00ff41;
+            --xp-bg-filter: grayscale(1) brightness(0.3);
+        }
+
+        [data-theme='glass'] {
+            --xp-primary: rgba(255, 255, 255, 0.15);
+            --xp-secondary: rgba(255, 255, 255, 0.25);
+            --xp-taskbar: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+            --xp-window-title: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+            --xp-accent: rgba(255, 255, 255, 0.4);
+            --xp-bg-filter: blur(4px) brightness(0.8);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Tahoma', sans-serif;
+            background: #000;
+            transition: all 0.5s ease-in-out;
+        }
+        .xp-blue-gradient {
+            background: var(--xp-window-title);
+        }
+        .xp-taskbar {
+            background: var(--xp-taskbar);
+            backdrop-filter: blur(10px);
+        }
+        .xp-button-active {
+            background: #1941a5;
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        .futuristic-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-left: 1px solid #ccc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border: 1px solid #aaa;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 255, 0.05) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CoMaCKht.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
