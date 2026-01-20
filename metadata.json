@@ -1,0 +1,10 @@
+
+{
+  "name": "XPFuture OS",
+  "description": "A fusion of nostalgic Windows XP aesthetics with high-end futuristic AI features, powered by Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
